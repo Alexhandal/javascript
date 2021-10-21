@@ -1,0 +1,26 @@
+let variable; /* variable decleration */
+variable = "variable"; /* variable definition */
+let number = 7; /* numer data type */
+let string = "hello"; /* string type data */
+let truthy = true; /* booleans */
+let falsey = false; /* booleans */
+let bigstring = "hello i am a bigger string";
+
+var variable2 = "var"; /* we dont do this */
+let variable3; /* we can define later or redefine */
+variable = "nope";
+//console.log(variable);
+const constant = "constant"; /* cannot redefine, use this 95% of the time */
+// constant = "kgljasrgklj";
+
+/* const nullTest = null;
+const undefinedTest = "test";
+
+console.log(nullTest, undefined); */
+const number1 = 19824;
+const number2 = 72;
+let add = number1 + number2;
+let sub = number1 - number2;
+let mult = number1 * number2;
+let div = number1 / number2;
+console.log(mult, div);
