@@ -24,3 +24,32 @@ let sub = number1 - number2;
 let mult = number1 * number2;
 let div = number1 / number2;
 console.log(mult, div);
+
+//strings
+const str = "Hello my name is";
+const name = " Mike";
+const greet = "How are you today?";
+const newStr = str + name + greet;
+
+//template literals
+const literal = `This is a new string, is it not cool? ${str} ${name} ${greet}`;
+console.log(literal);
+
+//functions
+function test() {
+  console.log("This is a test");
+} //declare the function
+test(); //call the function
+
+function argument(student) {
+  //accepts the argument
+  console.log(`this is my student ${student}`);
+}
+
+argument("Claire"); //not type specific
+argument(8);
+
+function add(x, y) {
+  return x + y;
+}
+console.log(add(7, 9));
