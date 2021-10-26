@@ -19,7 +19,7 @@ const undefinedTest = "test";
 console.log(nullTest, undefined); */
 const number1 = 19824;
 const number2 = 72;
-let add = number1 + number2;
+//let add = number1 + number2;
 let sub = number1 - number2;
 let mult = number1 * number2;
 let div = number1 / number2;
@@ -34,7 +34,6 @@ const newStr = str + name + greet;
 //template literals
 const literal = `This is a new string, is it not cool? ${str} ${name} ${greet}`;
 console.log(literal);
-
 //functions
 function test() {
   console.log("This is a test");
@@ -50,6 +49,8 @@ argument("Claire"); //not type specific
 argument(8);
 
 function add(x, y) {
-  return x + y;
+  return x + y; //return sends the product/output outside of the funtion scope
 }
-console.log(add(7, 9));
+//console.log(add(7, 9));
+const answer = add(7, 9);
+console.log(answer);
