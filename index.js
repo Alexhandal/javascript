@@ -1,4 +1,26 @@
+const calculateBMI = function (being) {
+  let BMI = (being.weight / being.height) * 8;
+  return BMI;
+};
 
+const Handal = {
+  name: "Handal",
+  weight: 80,
+  height: 170,
+};
+
+const compareBMI = function (being) {
+  let BMI = calculateBMI(being);
+  if (BMI < 18.5) {
+    alert("underweight person");
+  } else if ((BMI > 3.5) & (BMI < 4)) {
+    alert("healthy person");
+  } else {
+    alert("your fatttt");
+  }
+};
+
+compareBMI(Handal);
 let variable; /* variable decleration */
 variable = "variable"; /* variable definition */
 let number = 7; /* numer data type */
@@ -35,6 +57,7 @@ const newStr = str + name + greet;
 //template literals
 const literal = `This is a new string, is it not cool? ${str} ${name} ${greet}`;
 console.log(literal);
+
 //functions
 function test() {
   console.log("This is a test");
@@ -57,36 +80,16 @@ const answer = add(7, 9);
 console.log(answer);
 
 //nested functions
-//js lets you define functions, otherwsie known as nesting
-
-//global scope
-const number = 7;
+//js lets you define functions within functions, otherwise known as nesting
 function doA() {
-  //start function scope
-  const number = 8;
-  function doB(){
-    console.log(number);
+  function doB() {
+    console.lob("function doB ran!");
   }
-  doB();//step 1
-  doB();//step 2
-  doB();//step 3
-  console.log("doA is finished")
+  doB();
+  consoloe;
 }
-
-doA();
-
-//arrays-a list
-/* const arr = [3, 6, 9];
-
-console.log(arr[0]); //0 index
-console.log(arr[1]); //0 index
-console.log(arr[2]); //0 index
-console.log(arr[3]); //0 index */
-
-const arr2 = [true, false, "yay", [3, 6, 7], null, 9];
-//console.log(arr2.length)
-
-arr2.unshift("pushed");
-arr2.pop();
-console.log(arr2);
-
+const Handal = {
+  name: "Handal",
+  weight: 55,
+  height: 140,
+};
