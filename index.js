@@ -1,95 +1,24 @@
-const calculateBMI = function (being) {
-  let BMI = (being.weight / being.height) * 8;
+const BMIcalculator = function (being) {
+  let BMI = being.weight / being.height ** 2;
   return BMI;
 };
 
 const Handal = {
   name: "Handal",
-  weight: 80,
-  height: 170,
+  weight: 60,
+  height: 1.8,
 };
 
-const compareBMI = function (being) {
+const BMI = function (being) {
   let BMI = calculateBMI(being);
   if (BMI < 18.5) {
-    alert("underweight person");
-  } else if ((BMI > 3.5) & (BMI < 4)) {
-    alert("healthy person");
-  } else {
-    alert("your fatttt");
+    console.log("you are underweight");
+  } else if (BMI > 18.5 && BMI < 25) {
+    console.log("you are healthy");
+  } else if (BMI > 25) {
+    console.log("You are fat");
   }
 };
 
-compareBMI(Handal);
-let variable; /* variable decleration */
-variable = "variable"; /* variable definition */
-let number = 7; /* numer data type */
-let string = "hello"; /* string type data */
-let truthy = true; /* booleans */
-let falsey = false; /* booleans */
-let bigstring = "hello i am a bigger string";
-
-var variable2 = "var"; /* we dont do this */
-let variable3; /* we can define later or redefine */
-variable = "nope";
-//console.log(variable);
-const constant = "constant"; /* cannot redefine, use this 95% of the time */
-// constant = "kgljasrgklj";
-
-/* const nullTest = null;
-const undefinedTest = "test";
-
-console.log(nullTest, undefined); */
-const number1 = 19824;
-const number2 = 72;
-//let add = number1 + number2;
-let sub = number1 - number2;
-let mult = number1 * number2;
-let div = number1 / number2;
-console.log(mult, div);
-
-//strings
-const str = "Hello my name is";
-const name = " Mike";
-const greet = "How are you today?";
-const newStr = str + name + greet;
-
-//template literals
-const literal = `This is a new string, is it not cool? ${str} ${name} ${greet}`;
-console.log(literal);
-
-//functions
-function test() {
-  console.log("This is a test");
-} //declare the function
-test(); //call the function
-
-function argument(student) {
-  //accepts the argument
-  console.log(`this is my student ${student}`);
-}
-
-argument("Claire"); //not type specific
-argument(8);
-
-function add(x, y) {
-  return x + y; //return sends the product/output outside of the funtion scope
-}
-//console.log(add(7, 9));
-const answer = add(7, 9);
-console.log(answer);
-
-//nested functions
-//js lets you define functions within functions, otherwise known as nesting
-function doA() {
-  function doB() {
-    console.lob("function doB ran!");
-  }
-  doB();
-  consoloe;
-}
-const Handal = {
-  name: "Handal",
-  weight: 55,
-  height: 140,
-};
+CalculateBMI(Handal);
+console.log(BMI(Handal));
