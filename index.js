@@ -1,28 +1,13 @@
-const calculateBMI = function (being) {
-  let BMI = Math.round((being.weight / being.height **2) * 10000);
-  return BMI;
-};
+function search_animal() {
+  let input = document.getElementById("searchbar").value;
+  input = input.toLowerCase();
+  let x = document.getElementsByClassName("animals");
 
-const Handal = {
-  name: "Handal",
-  weight: 60,
-  height: 172,
-};
-
-const showBMI = function (being) {
-  let BMI = calculateBMI(being);
-  if (BMI < 18.5){
-    console.log("U R Underweight");
-    alert("U R Underweight");
-  } else if (BMI > 18.5 && BMI <=25) {
-console.log("Why r u so healthy");
-alert("Why r u so healthy");
-  } else if (BMI>25) {
-    console.log("you are fattt");
-    alert("you are fattt");
+  for (i = 0; i < x.length; i++) {
+    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+      x[i].style.display = "none";
+    } else {
+      x[i].style.display = "list-item";
+    }
   }
 }
-
-console.log("Ur BMI");
-console.log(calculateBMI(Handal));
-showBMI(Handal);
